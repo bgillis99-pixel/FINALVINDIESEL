@@ -1,13 +1,13 @@
 {
-  "name": "VIN-DIESEL Mobile CARB",
-  "short_name": "VIN-DIESEL",
-  "description": "Mobile Code Analysis and Review Bot powered by Google Gemini",
+  "name": "Mobile Carb Check",
+  "short_name": "Carb Check",
+  "description": "California Heavy-Duty Diesel CARB Compliance Checker - Instant VIN checks and certified smoke tester locations",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#1a1a1a",
-  "theme_color": "#ff6b35",
+  "background_color": "#003366",
+  "theme_color": "#00C853",
   "orientation": "portrait-primary",
-  "categories": ["developer-tools", "productivity"],
+  "categories": ["business", "utilities"],
   "icons": [
     {
       "src": "/icon-192.png",
