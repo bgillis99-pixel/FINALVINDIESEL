@@ -4,6 +4,11 @@ export enum AppView {
   ANALYZE = 'analyze',
   PROFILE = 'profile',
   ADMIN = 'admin'
+  HOME = 'HOME',
+  ASSISTANT = 'ASSISTANT',
+  ANALYZE = 'ANALYZE',
+  PROFILE = 'PROFILE',
+  ADMIN = 'ADMIN'
 }
 
 export interface HistoryItem {
