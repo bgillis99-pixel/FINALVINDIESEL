@@ -1,6 +1,6 @@
-# Carb Clean Truck Check
+# Mobile Carb Check
 
-A Next.js application for truck compliance and cleanliness verification.
+California's Premier Mobile CARB Compliance App. Instant VIN Checks & Smoke Testing for Heavy Duty Diesel vehicles.
 
 ## Getting Started
 
@@ -77,24 +77,52 @@ Create a `.env.local` file for local development:
 # Add your environment variables here
 ```
 
+## 🚀 Features
+
+- **VIN Compliance Check**: Instantly verify CARB compliance status
+- **AI Chat Assistant**: Get answers to compliance questions powered by Google Gemini
+- **Media Analysis**: Upload photos/videos for AI-powered inspection
+- **User Profiles**: Track your check history
+- **PWA Support**: Install as a mobile app on iOS and Android
+- **Offline Mode**: Access history even without internet
+
 ## Tech Stack
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Vite + React
 - **Language**: TypeScript
-- **Styling**: Tailwind CSS
+- **Styling**: Tailwind CSS (via CDN)
+- **AI**: Google Gemini API
 - **Deployment**: Vercel
 
 ## Project Structure
 
 ```
 .
-├── app/
-│   ├── layout.tsx       # Root layout
-│   ├── page.tsx         # Home page
-│   └── globals.css      # Global styles
-├── public/              # Static assets
-├── next.config.js       # Next.js configuration
-├── tailwind.config.ts   # Tailwind CSS configuration
-├── tsconfig.json        # TypeScript configuration
-└── vercel.json          # Vercel deployment configuration
+├── src/
+│   ├── components/      # React components
+│   ├── App.tsx         # Main app component
+│   └── types.ts        # TypeScript types
+├── index.tsx           # Entry point
+├── index.html          # HTML template
+├── vite.config.ts      # Vite configuration
+├── tsconfig.json       # TypeScript configuration
+└── vercel.json         # Vercel deployment configuration
 ```
+
+## 🔑 API Integration
+
+This app uses Google Gemini AI. To enable AI features:
+
+1. Get a Gemini API key from [Google AI Studio](https://aistudio.google.com)
+2. Add it as `API_KEY` environment variable in Vercel
+3. Redeploy the application
+
+## 📞 Contact
+
+- **Phone**: 844-685-8922
+- **Email**: info@carbcleantruckcheck.app
+- **Website**: https://carbcleantruckcheck.app
+
+## 📄 License
+
+Copyright 2026 Mobile Carb Check. All rights reserved.
