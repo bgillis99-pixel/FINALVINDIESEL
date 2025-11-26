@@ -1,134 +1,124 @@
-# 🏎️ VIN-DIESEL - Mobile CARB Compliance
+# 🚛 Mobile Carb Check - CARB Compliance App
 
-**Mobile CARB Compliance Application**
+**California's Premier Mobile CARB Compliance Application**
 Version: 0.1.0 (Alpha) | Phase: Mobile Web
 
-## Overview
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/bgillis99-pixel/FINALVINDIESEL)
 
-VIN-DIESEL is a mobile-first CARB compliance application designed to help with regulatory compliance tracking and management.
+## 📱 Overview
 
-## Deployment Status
+Mobile Carb Check is a Progressive Web App (PWA) for heavy-duty diesel vehicle operators to comply with California Air Resources Board (CARB) regulations.
 
-- **Repository**: `bgillis99-pixel/VIN-Diesel---Mobile-CARB`
-- **Branch**: `claude/vin-diesel-setup-019h3xff9zaUDiNfj1xd2nct`
-- **Platform**: Vercel
-- **Framework**: Vite (Mobile Web)
+**Target Vehicles:**
+- Heavy-Duty Diesel Trucks >14,000 lbs GVWR
+- Diesel Motorhomes and RVs
+- Agricultural Equipment with diesel engines
+- **NO GASOLINE VEHICLES**
 
-## 🚀 Vercel Deployment Instructions
+## ✨ Features
 
-### Option 1: Deploy via Vercel Dashboard (Recommended)
+- ✅ **Instant VIN Compliance Checks**
+- 🤖 **AI Chat Assistant** (Google Gemini)
+- 📸 **Media Analysis Tools**
+- 👤 **User Profiles & History**
+- 📱 **PWA Installation**
+- 🌐 **Offline Support**
+- 📞 **Mobile Service**: 844-685-8922
 
-1. **Go to Vercel Dashboard**: https://vercel.com/new
-2. **Import Git Repository**:
-   - Click "Add New Project"
-   - Select "Import Git Repository"
-   - Choose: `bgillis99-pixel/VIN-Diesel---Mobile-CARB`
-3. **Configure Project**:
-   - Framework Preset: `Vite`
-   - Root Directory: `./`
+## 🚀 Deployment & Integration
+
+### Vercel Deployment
+
+#### Quick Deploy
+1. Click "Deploy with Vercel" button above, OR
+2. Go to [vercel.com/new](https://vercel.com/new)
+3. Import: `bgillis99-pixel/FINALVINDIESEL`
+4. Configure:
+   - Framework: **Vite**
    - Build Command: `npm run build`
    - Output Directory: `dist`
-4. **Deploy Branch**:
-   - Production Branch: `main` or `claude/vin-diesel-setup-019h3xff9zaUDiNfj1xd2nct`
-5. **Click "Deploy"**
+5. Add Environment Variable: `API_KEY` (Google AI Studio)
+6. Deploy!
 
-### Option 2: Deploy via Vercel CLI
+### Squarespace Integration
 
-```bash
-# Install Vercel CLI
-npm i -g vercel
-
-# Login to Vercel
-vercel login
-
-# Deploy to production
-vercel --prod
+#### Full Page Embed
+```html
+<iframe
+  src="https://your-vercel-app.vercel.app"
+  style="width:100%; height:100vh; border:none;"
+  title="Mobile Carb Check"
+></iframe>
 ```
 
-### Option 3: Automatic Deployment (GitHub Integration)
+#### Widget Embed
+```html
+<div style="max-width: 600px; margin: 0 auto;">
+  <iframe
+    src="https://your-vercel-app.vercel.app"
+    style="width:100%; height:800px; border:2px solid #003366; border-radius:12px;"
+  ></iframe>
+</div>
+```
 
-Once connected to Vercel:
-- Every push to the branch automatically deploys
-- Pull requests create preview deployments
-- Vercel bot comments on PRs with preview URLs
+### Google AI Studio Setup
 
-## 📱 Development Roadmap
-
-- ✅ **Phase 1**: Mobile Web Version (Current)
-- 🔄 **Phase 2**: Android App
-- 🔄 **Phase 3**: iOS App
+1. Get API key: [ai.google.dev](https://ai.google.dev/)
+2. In Vercel: Settings → Environment Variables
+3. Add: `API_KEY` = `your_google_api_key`
+4. Redeploy
 
 ## 🛠️ Local Development
 
 ```bash
-# Install dependencies
+git clone https://github.com/bgillis99-pixel/FINALVINDIESEL.git
+cd FINALVINDIESEL
 npm install
-
-# Run development server
+cp .env.example .env  # Add your API_KEY
 npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
 ```
 
-## 📋 Project Structure
+## 📂 Project Structure
 
 ```
 FINALVINDIESEL/
-├── public/
-│   ├── index.html          # Main HTML file
-│   ├── css/
-│   │   └── style.css       # Mobile-first styles
-│   ├── js/
-│   │   └── app.js          # Application logic
-│   ├── manifest.json       # PWA manifest
-│   └── service-worker.js   # Service worker for offline support
-├── vercel.json             # Vercel configuration
-├── vite.config.js          # Vite configuration
-├── package.json            # Dependencies
-└── README.md              # This file
+├── src/
+│   ├── components/
+│   │   ├── VinChecker.tsx
+│   │   ├── ChatAssistant.tsx
+│   │   ├── MediaTools.tsx
+│   │   ├── ProfileView.tsx
+│   │   └── AdminView.tsx
+│   ├── types.ts
+│   └── App.tsx
+├── public/manifest.json
+├── index.html
+├── vite.config.ts
+└── package.json
 ```
 
-## 🔧 Configuration Files
+## 📱 PWA Features
 
-### `vercel.json`
-Configured for automatic deployment with security headers and framework detection.
+- Installable on all platforms
+- Offline-capable
+- Push notifications (coming soon)
+- Share Target support
 
-### `package.json`
-Includes build scripts and dependencies for Vite-based deployment.
+## 📞 Support
 
-## 📊 Features
+- **Phone**: 844-685-8922
+- **Email**: info@carbcleantruckcheck.app
+- **Website**: https://carbcleantruckcheck.app
+- **Service**: All of California
 
-- **Mobile-First Design**: Optimized for mobile devices
-- **PWA Support**: Installable as a Progressive Web App
-- **Offline Capable**: Service worker for offline functionality
-- **Responsive**: Adapts to all screen sizes
-- **Performance Optimized**: Fast load times and smooth interactions
+## 📈 Roadmap
 
-## 🔗 Links
-
-- **GitHub**: https://github.com/bgillis99-pixel/VIN-Diesel---Mobile-CARB
-- **Vercel**: (Will be generated after deployment)
-
-## 📝 Next Steps
-
-1. Push code to GitHub
-2. Connect repository to Vercel
-3. Configure environment variables (if needed)
-4. Deploy and test
-
-## 🤝 Contributing
-
-This project is in active development. Contributions welcome!
+- ✅ Phase 1: Mobile Web (Current)
+- 🔄 Phase 2: Enhanced Features (Q1 2026)
+- 🔄 Phase 3: Native Apps (Q2 2026)
 
 ## 📄 License
 
-MIT License
+MIT License © 2025 Mobile Carb Check
 
----
-
-**Powered by Vite + Vercel**
-© 2025 VIN-DIESEL
+**Built with React + Vite + Tailwind + Google Gemini**
