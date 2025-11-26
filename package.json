@@ -1,32 +1,11 @@
 {
-  "name": "vin-diesel-mobile-carb",
-  "version": "0.1.0",
-  "description": "VIN-DIESEL - Mobile Code Analysis and Review Bot",
-  "main": "index.js",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "start": "vite"
-  },
-  "keywords": [
-    "mobile",
-    "code-review",
-    "carb",
-    "ai",
-    "gemini"
-  ],
-  "author": "bgillis99-pixel",
-  "license": "MIT",
-  "dependencies": {
-    "vite": "^5.0.0"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   "name": "mobile-carb-check",
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "description": "California's Premier Mobile CARB Compliance App",
+  "author": "bgillis99-pixel",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -34,15 +13,18 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "@google/genai": "^0.1.0"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "@types/node": "^20.14.9",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
-    "vite": "^5.4.1",
+    "sharp": "^0.34.5",
     "typescript": "^5.5.3",
-    "@types/node": "^20.14.9"
+    "vite": "^5.4.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
