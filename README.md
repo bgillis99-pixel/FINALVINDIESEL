@@ -25,11 +25,10 @@ Mobile Carb Check is a Progressive Web App (PWA) for heavy-duty diesel vehicle o
 - 🌐 **Offline Support**
 - 📞 **Mobile Service**: 844-685-8922
 
-## 🚀 Deployment & Integration
+## 🚀 Deployment to Vercel
 
-### Vercel Deployment
+### Quick Deploy
 
-#### Quick Deploy
 1. Click "Deploy with Vercel" button above, OR
 2. Go to [vercel.com/new](https://vercel.com/new)
 3. Import: `bgillis99-pixel/FINALVINDIESEL`
@@ -39,6 +38,12 @@ Mobile Carb Check is a Progressive Web App (PWA) for heavy-duty diesel vehicle o
    - Output Directory: `dist`
 5. Add Environment Variable: `API_KEY` (Google AI Studio)
 6. Deploy!
+
+### Environment Variables
+
+In Vercel dashboard, add:
+- **Key**: `API_KEY`
+- **Value**: Your Google Gemini API key from [ai.google.dev](https://ai.google.dev/)
 
 ### Squarespace Integration
 
@@ -61,13 +66,6 @@ Mobile Carb Check is a Progressive Web App (PWA) for heavy-duty diesel vehicle o
 </div>
 ```
 
-### Google AI Studio Setup
-
-1. Get API key: [ai.google.dev](https://ai.google.dev/)
-2. In Vercel: Settings → Environment Variables
-3. Add: `API_KEY` = `your_google_api_key`
-4. Redeploy
-
 ## 🛠️ Local Development
 
 ```bash
@@ -77,6 +75,8 @@ npm install
 cp .env.example .env  # Add your API_KEY
 npm run dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000)
 
 ## 📂 Project Structure
 
@@ -97,6 +97,14 @@ FINALVINDIESEL/
 └── package.json
 ```
 
+## 🔑 Tech Stack
+
+- **Framework**: Vite + React 18
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **AI**: Google Gemini API
+- **Deployment**: Vercel
+
 ## 📱 PWA Features
 
 - Installable on all platforms
@@ -104,7 +112,7 @@ FINALVINDIESEL/
 - Push notifications (coming soon)
 - Share Target support
 
-## 📞 Support
+## 📞 Contact & Support
 
 - **Phone**: 844-685-8922
 - **Email**: info@carbcleantruckcheck.app
@@ -122,133 +130,3 @@ FINALVINDIESEL/
 MIT License © 2025 Mobile Carb Check
 
 **Built with React + Vite + Tailwind + Google Gemini**
-**Powered by Vite + Vercel**
-© 2025 VIN-DIESEL
-# Mobile Carb Check
-
-California's Premier Mobile CARB Compliance App. Instant VIN Checks & Smoke Testing for Heavy Duty Diesel vehicles.
-
-## Getting Started
-
-### Prerequisites
-- Node.js 18 or higher
-- npm or yarn
-
-### Installation
-
-```bash
-npm install
-```
-
-### Development
-
-Run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-### Building for Production
-
-```bash
-npm run build
-npm start
-```
-
-## Deployment to Vercel
-
-This application is configured for easy deployment to Vercel.
-
-### Option 1: Deploy via Vercel Dashboard
-
-1. Go to [vercel.com](https://vercel.com)
-2. Click "Add New" → "Project"
-3. Import your GitHub repository
-4. Vercel will automatically detect Next.js configuration
-5. Click "Deploy"
-
-### Option 2: Deploy via Vercel CLI
-
-```bash
-npm i -g vercel
-vercel
-```
-
-## Domain Configuration
-
-To connect your domain `carbcleantruckcheck.app` to Vercel:
-
-1. Go to your Vercel project dashboard
-2. Navigate to Settings → Domains
-3. Add `carbcleantruckcheck.app` as a custom domain
-4. Vercel will provide DNS records to configure
-5. Add these DNS records in your domain registrar:
-   - Type: A Record
-   - Name: @ (or your domain)
-   - Value: 76.76.21.21
-   - Or use CNAME: cname.vercel-dns.com
-
-6. For www subdomain:
-   - Type: CNAME
-   - Name: www
-   - Value: cname.vercel-dns.com
-
-## Environment Variables
-
-Create a `.env.local` file for local development:
-
-```env
-# Add your environment variables here
-```
-
-## 🚀 Features
-
-- **VIN Compliance Check**: Instantly verify CARB compliance status
-- **AI Chat Assistant**: Get answers to compliance questions powered by Google Gemini
-- **Media Analysis**: Upload photos/videos for AI-powered inspection
-- **User Profiles**: Track your check history
-- **PWA Support**: Install as a mobile app on iOS and Android
-- **Offline Mode**: Access history even without internet
-
-## Tech Stack
-
-- **Framework**: Vite + React
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS (via CDN)
-- **AI**: Google Gemini API
-- **Deployment**: Vercel
-
-## Project Structure
-
-```
-.
-├── src/
-│   ├── components/      # React components
-│   ├── App.tsx         # Main app component
-│   └── types.ts        # TypeScript types
-├── index.tsx           # Entry point
-├── index.html          # HTML template
-├── vite.config.ts      # Vite configuration
-├── tsconfig.json       # TypeScript configuration
-└── vercel.json         # Vercel deployment configuration
-```
-
-## 🔑 API Integration
-
-This app uses Google Gemini AI. To enable AI features:
-
-1. Get a Gemini API key from [Google AI Studio](https://aistudio.google.com)
-2. Add it as `API_KEY` environment variable in Vercel
-3. Redeploy the application
-
-## 📞 Contact
-
-- **Phone**: 844-685-8922
-- **Email**: info@carbcleantruckcheck.app
-- **Website**: https://carbcleantruckcheck.app
-
-## 📄 License
-
-Copyright 2026 Mobile Carb Check. All rights reserved.

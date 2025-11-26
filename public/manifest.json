@@ -8,15 +8,6 @@
   "theme_color": "#003366",
   "orientation": "portrait-primary",
   "categories": ["business", "productivity", "utilities"],
-  "name": "Mobile Carb Check",
-  "short_name": "Carb Check",
-  "description": "California Heavy-Duty Diesel CARB Compliance Checker - Instant VIN checks and certified smoke tester locations",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#003366",
-  "theme_color": "#00C853",
-  "orientation": "portrait-primary",
-  "categories": ["business", "utilities"],
   "icons": [
     {
       "src": "/icon-192.png",
