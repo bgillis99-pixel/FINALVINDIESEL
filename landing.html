@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="California CARB compliance made simple. Instant VIN checks, mobile smoke testing, and TRUCRS compliance verification for heavy-duty diesel vehicles.">
+    <title>CARB Clean Truck Check - California Diesel Compliance Made Easy</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .pattern-bg {
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE0YzAtMS4xLjktMiAyLTJoNGMxLjEgMCAyIC45IDIgMnY0YzAgMS4xLS45IDItMiAyaC00Yy0xLjEgMC0yLS45LTItMnYtNHptMCAxMGMwLTEuMS45LTIgMi0yaDRjMS4xIDAgMiAuOSAyIDJ2NGMwIDEuMS0uOSAyLTIgMmgtNGMtMS4xIDAtMi0uOS0yLTJ2LTR6bTAgMTBjMC0xLjEuOS0yIDItMmg0YzEuMSAwIDIgLjkgMiAydjRjMCAxLjEtLjkgMi0yIDJoLTRjLTEuMSAwLTItLjktMi0ydi00ek0yNiAxNGMwLTEuMS45LTIgMi0yaDRjMS4xIDAgMiAuOSAyIDJ2NGMwIDEuMS0uOSAyLTIgMmgtNGMtMS4xIDAtMi0uOS0yLTJ2LTR6bTAgMTBjMC0xLjEuOS0yIDItMmg0YzEuMSAwIDIgLjkgMiAydjRjMCAxLjEtLjkgMi0yIDJoLTRjLTEuMSAwLTItLjktMi0ydi00em0wIDEwYzAtMS4xLjktMiAyLTJoNGMxLjEgMCAyIC45IDIgMnY0YzAgMS4xLS45IDItMiAyaC00Yy0xLjEgMC0yLS45LTItMnYtNHpNMTYgMTRjMC0xLjEuOS0yIDItMmg0YzEuMSAwIDIgLjkgMiAydjRjMCAxLjEtLjkgMi0yIDJoLTRjLTEuMSAwLTItLjktMi0ydi00em0wIDEwYzAtMS4xLjktMiAyLTJoNGMxLjEgMCAyIC45IDIgMnY0YzAgMS4xLS45IDItMiAyaC00Yy0xLjEgMC0yLS45LTItMnYtNHptMCAxMGMwLTEuMS45LTIgMi0yaDRjMS4xIDAgMiAuOSAyIDJ2NGMwIDEuMS0uOSAyLTIgMmgtNGMtMS4xIDAtMi0uOS0yLTJ2LTR6Ii8+PC9nPjwvZz48L3N2Zz4=');
+        }
+
+        @keyframes pulse-subtle {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .pulse-subtle {
+            animation: pulse-subtle 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes slide-up {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .slide-up {
+            animation: slide-up 0.6s ease-out;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-[#003366] via-[#004080] to-[#0052a3] text-white overflow-hidden">
+        <div class="absolute inset-0 pattern-bg opacity-10"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="text-center lg:text-left slide-up">
+                    <div class="inline-flex items-center bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20">
+                        <span class="w-2 h-2 bg-[#00C853] rounded-full mr-2 pulse-subtle"></span>
+                        <span class="text-sm font-medium">Now Available Statewide</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        California CARB Compliance
+                        <span class="block text-[#00C853] mt-2">Made Simple</span>
+                    </h1>
+
+                    <p class="text-xl text-blue-100 mb-8 max-w-xl mx-auto lg:mx-0">
+                        Instant VIN checks, mobile smoke testing, and TRUCRS compliance verification. Keep your heavy-duty diesel vehicles on the road, hassle-free.
+                    </p>
+
+                    <!-- Download Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
+                        <a
+                            href="https://carbcleantruckcheck.app"
+                            class="inline-flex items-center justify-center bg-[#00C853] hover:bg-[#00a846] text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 no-underline"
+                        >
+                            <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            Start Free Check
+                        </a>
+
+                        <a
+                            href="tel:844-685-8922"
+                            class="inline-flex items-center justify-center bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-semibold px-8 py-4 rounded-xl border-2 border-white/30 hover:border-white/50 transition-all duration-200 no-underline"
+                        >
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            Call 844-685-8922
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="flex items-center gap-6 justify-center lg:justify-start text-sm text-blue-100">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-[#00C853] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            CARB Approved
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-[#00C853] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Instant Results
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 text-[#00C853] mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            Mobile Service
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image - App Mockup -->
+                <div class="relative lg:ml-8">
+                    <div class="relative bg-white rounded-3xl shadow-2xl p-4 transform lg:rotate-2 hover:rotate-0 transition-transform duration-300">
+                        <div class="bg-gradient-to-br from-[#003366] to-[#0052a3] rounded-2xl p-6 aspect-[9/16] flex flex-col">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="text-white font-bold text-lg">CARB Clean</div>
+                                <div class="w-8 h-8 bg-[#00C853] rounded-full"></div>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 mb-4">
+                                <div class="text-white/80 text-sm mb-2">Enter VIN Number</div>
+                                <div class="bg-white/20 rounded-lg p-3 font-mono text-white">
+                                    1FDUF5GT8EEA12345
+                                </div>
+                            </div>
+                            <div class="bg-[#00C853]/20 border-2 border-[#00C853] rounded-xl p-4 flex-grow flex items-center justify-center">
+                                <div class="text-center">
+                                    <svg class="w-16 h-16 text-[#00C853] mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    <div class="text-[#00C853] font-bold text-xl">COMPLIANT</div>
+                                    <div class="text-white/80 text-sm mt-1">Ready to Operate</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-[#00C853] rounded-full opacity-20 blur-2xl"></div>
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-blue-400 rounded-full opacity-20 blur-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#003366] mb-4">
+                    Everything You Need for CARB Compliance
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive tools and services to keep your heavy-duty diesel fleet compliant with California regulations.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#003366] to-[#0052a3] rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">Instant VIN Checks</h3>
+                    <p class="text-gray-600 mb-4">
+                        Get immediate compliance status for any VIN. Check TRUCRS registration, smoke test history, and PSIP requirements in seconds.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Real-time database lookup
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Comprehensive compliance report
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Save and share results
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#003366] to-[#0052a3] rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">Mobile Smoke Testing</h3>
+                    <p class="text-gray-600 mb-4">
+                        We come to you! Schedule mobile smoke and OBD testing anywhere in California. No need to find a testing center.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Statewide coverage
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Certified technicians
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Same-day appointments
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#003366] to-[#0052a3] rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">AI Assistant</h3>
+                    <p class="text-gray-600 mb-4">
+                        Get instant answers to your CARB compliance questions. Our AI-powered assistant knows California diesel regulations inside and out.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            24/7 availability
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Expert CARB knowledge
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Instant responses
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#003366] to-[#0052a3] rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">Document Analysis</h3>
+                    <p class="text-gray-600 mb-4">
+                        Upload photos of documents, inspection reports, or vehicle plates. Our AI analyzes and extracts key compliance information.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            OCR text extraction
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Smart document parsing
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Secure cloud storage
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#003366] to-[#0052a3] rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">Compliance History</h3>
+                    <p class="text-gray-600 mb-4">
+                        Track all your checks, tests, and reports in one place. Export records for audits and maintain a complete compliance history.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Complete check history
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            PDF export options
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Fleet management
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                    <div class="w-14 h-14 bg-gradient-to-br from-[#003366] to-[#0052a3] rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">Offline Access</h3>
+                    <p class="text-gray-600 mb-4">
+                        Install as a Progressive Web App. Access key features even without internet connection, perfect for remote locations.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-700">
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Works offline
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            App-like experience
+                        </li>
+                        <li class="flex items-center">
+                            <svg class="w-4 h-4 text-[#00C853] mr-2 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                            Auto-sync when online
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tester Features Section -->
+    <section id="beta-testing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center bg-[#003366]/10 rounded-full px-4 py-2 mb-4">
+                    <span class="text-[#003366] font-semibold text-sm">BETA TESTING PROGRAM</span>
+                </div>
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#003366] mb-4">
+                    Join Our Beta Testing Community
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Help shape the future of CARB compliance technology. Get early access to new features and contribute to product development.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="space-y-6">
+                        <!-- Tester Benefit 1 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-gradient-to-br from-[#00C853] to-[#00a846] rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-[#003366] mb-2">Early Access to Features</h3>
+                                <p class="text-gray-600">
+                                    Be the first to try new compliance tools, AI enhancements, and mobile testing features before general release.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Tester Benefit 2 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-gradient-to-br from-[#00C853] to-[#00a846] rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-[#003366] mb-2">Special Pricing & Rewards</h3>
+                                <p class="text-gray-600">
+                                    Enjoy discounted testing rates, free compliance checks, and exclusive beta tester perks as our thank you.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Tester Benefit 3 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-gradient-to-br from-[#00C853] to-[#00a846] rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-[#003366] mb-2">Direct Developer Feedback</h3>
+                                <p class="text-gray-600">
+                                    Share your insights directly with our development team. Your feedback shapes product priorities and features.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Tester Benefit 4 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-gradient-to-br from-[#00C853] to-[#00a846] rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-[#003366] mb-2">Premium Support Access</h3>
+                                <p class="text-gray-600">
+                                    Get priority customer support, dedicated beta channels, and faster response times for all your questions.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Tester Benefit 5 -->
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0">
+                                <div class="w-12 h-12 bg-gradient-to-br from-[#00C853] to-[#00a846] rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-[#003366] mb-2">Exclusive Community</h3>
+                                <p class="text-gray-600">
+                                    Connect with other fleet operators and industry professionals in our private beta tester community.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 p-6 bg-gradient-to-br from-[#003366]/5 to-[#00C853]/5 rounded-2xl border border-[#003366]/10">
+                        <h4 class="font-bold text-[#003366] mb-2">What We're Testing Now:</h4>
+                        <ul class="space-y-2 text-sm text-gray-700">
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#00C853] rounded-full mr-2 flex-shrink-0"></span>
+                                Advanced VIN database integration with real-time CARB updates
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#00C853] rounded-full mr-2 flex-shrink-0"></span>
+                                Automated compliance renewal reminders and notifications
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#00C853] rounded-full mr-2 flex-shrink-0"></span>
+                                Fleet management dashboard for multi-vehicle operators
+                            </li>
+                            <li class="flex items-center">
+                                <span class="w-2 h-2 bg-[#00C853] rounded-full mr-2 flex-shrink-0"></span>
+                                Mobile smoke testing appointment scheduling system
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-[#003366] to-[#0052a3] rounded-3xl p-8 text-white shadow-2xl">
+                        <div class="absolute top-0 right-0 w-40 h-40 bg-[#00C853] rounded-full opacity-10 blur-3xl"></div>
+                        <div class="relative">
+                            <h3 class="text-2xl font-bold mb-4">Ready to Join?</h3>
+                            <p class="text-blue-100 mb-6">
+                                Become a beta tester today and help us build the best CARB compliance platform in California.
+                            </p>
+
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-[#00C853] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                        <span class="text-white text-sm font-bold">1</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold mb-1">Sign Up for Free</div>
+                                        <div class="text-sm text-blue-100">Create your account and express interest in beta testing</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-[#00C853] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                        <span class="text-white text-sm font-bold">2</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold mb-1">Complete Brief Survey</div>
+                                        <div class="text-sm text-blue-100">Tell us about your fleet and compliance needs</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="flex-shrink-0 w-6 h-6 bg-[#00C853] rounded-full flex items-center justify-center mr-3 mt-0.5">
+                                        <span class="text-white text-sm font-bold">3</span>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold mb-1">Start Testing</div>
+                                        <div class="text-sm text-blue-100">Get immediate access to beta features and exclusive benefits</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a
+                                href="https://carbcleantruckcheck.app"
+                                class="block w-full bg-[#00C853] hover:bg-[#00a846] text-white font-bold py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 text-center no-underline"
+                            >
+                                Join Beta Program
+                            </a>
+
+                            <div class="mt-6 text-center">
+                                <a
+                                    href="mailto:info@carbcleantruckcheck.app?subject=Beta%20Testing%20Inquiry"
+                                    class="text-sm text-blue-200 hover:text-white underline"
+                                >
+                                    Questions? Email us at info@carbcleantruckcheck.app
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute -bottom-4 -left-4 w-24 h-24 bg-[#00C853] rounded-full opacity-20 blur-2xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-[#003366] mb-4">
+                    How It Works
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Get compliant in three simple steps. No appointments needed for VIN checks.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-24 h-24 bg-gradient-to-br from-[#003366] to-[#0052a3] rounded-full flex items-center justify-center mx-auto shadow-xl">
+                            <span class="text-4xl font-bold text-white">1</span>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-[#00C853] rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">Enter Your VIN</h3>
+                    <p class="text-gray-600">
+                        Simply type in your 17-character Vehicle Identification Number. Works on any device, anywhere.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-24 h-24 bg-gradient-to-br from-[#003366] to-[#0052a3] rounded-full flex items-center justify-center mx-auto shadow-xl">
+                            <span class="text-4xl font-bold text-white">2</span>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-[#00C853] rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">Get Instant Results</h3>
+                    <p class="text-gray-600">
+                        Our system checks TRUCRS, smoke test history, and PSIP status in real-time. Results in seconds.
+                    </p>
+                </div>
+
+                <div class="text-center">
+                    <div class="relative inline-block mb-6">
+                        <div class="w-24 h-24 bg-gradient-to-br from-[#003366] to-[#0052a3] rounded-full flex items-center justify-center mx-auto shadow-xl">
+                            <span class="text-4xl font-bold text-white">3</span>
+                        </div>
+                        <div class="absolute -top-2 -right-2 w-8 h-8 bg-[#00C853] rounded-full flex items-center justify-center">
+                            <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#003366] mb-3">Take Action</h3>
+                    <p class="text-gray-600">
+                        If testing is needed, schedule mobile service. If compliant, save and share your results instantly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gradient-to-br from-[#003366] via-[#004080] to-[#0052a3] text-white relative overflow-hidden">
+        <div class="absolute inset-0 pattern-bg opacity-10"></div>
+
+        <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+                Ready to Stay Compliant?
+            </h2>
+            <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Join thousands of California fleet operators who trust CARB Clean for their compliance needs. Start your free VIN check today.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a
+                    href="https://carbcleantruckcheck.app"
+                    class="inline-flex items-center justify-center bg-[#00C853] hover:bg-[#00a846] text-white font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 no-underline"
+                >
+                    <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                    Check Your VIN Now
+                </a>
+
+                <a
+                    href="tel:844-685-8922"
+                    class="inline-flex items-center justify-center bg-white text-[#003366] font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:scale-105 no-underline"
+                >
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    Schedule Mobile Test
+                </a>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-8 pt-12 border-t border-white/20">
+                <div>
+                    <div class="text-3xl font-bold text-[#00C853] mb-2">5,000+</div>
+                    <div class="text-blue-100">VIN Checks Completed</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-[#00C853] mb-2">24/7</div>
+                    <div class="text-blue-100">Online Availability</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold text-[#00C853] mb-2">100%</div>
+                    <div class="text-blue-100">California Coverage</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#003366] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-lg font-bold mb-4">CARB Clean</h3>
+                    <p class="text-blue-200 text-sm">
+                        California's trusted mobile CARB compliance and smoke testing service for heavy-duty diesel vehicles.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-blue-200">
+                        <li><a href="#features" class="hover:text-white transition-colors">VIN Compliance Checks</a></li>
+                        <li><a href="#features" class="hover:text-white transition-colors">Mobile Smoke Testing</a></li>
+                        <li><a href="#features" class="hover:text-white transition-colors">TRUCRS Verification</a></li>
+                        <li><a href="#features" class="hover:text-white transition-colors">PSIP Requirements</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-blue-200">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#beta-testing" class="hover:text-white transition-colors">Beta Testing Program</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Service Areas</a></li>
+                        <li><a href="mailto:info@carbcleantruckcheck.app" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm text-blue-200">
+                        <li><a href="tel:844-685-8922" class="hover:text-white transition-colors">Phone: 844-685-8922</a></li>
+                        <li><a href="mailto:info@carbcleantruckcheck.app" class="hover:text-white transition-colors">Email: info@carbcleantruckcheck.app</a></li>
+                        <li><a href="https://carbcleantruckcheck.app" class="hover:text-white transition-colors">Web: carbcleantruckcheck.app</a></li>
+                        <li class="pt-2">
+                            <span class="inline-flex items-center">
+                                <span class="w-2 h-2 bg-[#00C853] rounded-full mr-2 pulse-subtle"></span>
+                                Available 24/7
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/20 pt-8 text-center text-sm text-blue-200">
+                <p>&copy; <span id="year"></span> CARB Clean Truck Check. All rights reserved. | Serving all of California</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
