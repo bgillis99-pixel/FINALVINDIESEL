@@ -9,7 +9,7 @@ export enum AppView {
 export interface HistoryItem {
   id: string;
   value: string;
-  type: 'VIN' | 'ENTITY' | 'TRUCRS';
+  type: 'VIN' | 'ENTITY';
   timestamp: number;
 }
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 interface VinCheckerProps {
-  onAddToHistory: (value: string, type: 'VIN' | 'ENTITY' | 'TRUCRS') => void;
+  onAddToHistory: (value: string, type: 'VIN' | 'ENTITY') => void;
   onNavigateChat: () => void;
   onInstallApp: () => void;
 }

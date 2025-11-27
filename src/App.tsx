@@ -102,7 +102,7 @@ const App: React.FC = () => {
     setCurrentView(AppView.HOME);
   };
 
-  const handleAddToHistory = (value: string, type: 'VIN' | 'ENTITY' | 'TRUCRS') => {
+  const handleAddToHistory = (value: string, type: 'VIN' | 'ENTITY') => {
     if (!user) return;
 
     const newItem: HistoryItem = {
