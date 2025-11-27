@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#003366" rx="76.8"/>
+
+  <!-- Truck body -->
+  <rect x="102.4" y="204.8" width="307.2" height="153.6" fill="#00C853" rx="15.36"/>
+
+  <!-- Truck cab -->
+  <rect x="332.8" y="128" width="76.8" height="76.8" fill="#00C853" rx="10.24"/>
+
+  <!-- Check mark -->
+  <path d="M 179.2 256 L 215.04 291.84 L 281.6 204.8"
+        stroke="#fff" stroke-width="30.72" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Wheels -->
+  <circle cx="153.6" cy="384" r="40.96" fill="#fff"/>
+  <circle cx="332.8" cy="384" r="40.96" fill="#fff"/>
+
+  <!-- Text -->
+  <text x="256" y="460.8" font-family="Arial, sans-serif" font-weight="bold"
+        font-size="71.68" fill="#fff" text-anchor="middle">CARB</text>
+</svg>
