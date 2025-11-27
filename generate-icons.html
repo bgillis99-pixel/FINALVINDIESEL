@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Icon Generator - Mobile Carb Check</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+        }
+        .instructions {
+            max-width: 600px;
+            margin: 0 auto 20px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: 2px solid #ccc;
+            border-radius: 20px;
+        }
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 15px 30px;
+            background: #00C853;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #00a844;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h1>🚛 Icon Generator for Mobile Carb Check</h1>
+        <p><strong>Instructions:</strong></p>
+        <ol>
+            <li>Click the buttons below to download icons</li>
+            <li>Save as <code>icon-192.png</code> and <code>icon-512.png</code></li>
+            <li>Upload to <code>/public/</code> folder in your project</li>
+        </ol>
+    </div>
+
+    <h2 style="text-align: center;">192x192 Icon</h2>
+    <canvas id="icon192" width="192" height="192"></canvas>
+    <button onclick="download('icon192', 'icon-192.png')">Download 192x192 Icon</button>
+
+    <h2 style="text-align: center;">512x512 Icon</h2>
+    <canvas id="icon512" width="512" height="512"></canvas>
+    <button onclick="download('icon512', 'icon-512.png')">Download 512x512 Icon</button>
+
+    <script>
+        function drawIcon(canvas) {
+            const ctx = canvas.getContext('2d');
+            const size = canvas.width;
+            const scale = size / 100;
+
+            // Background
+            ctx.fillStyle = '#003366';
+            ctx.roundRect(0, 0, size, size, size * 0.2);
+            ctx.fill();
+
+            // Truck body (simplified)
+            ctx.fillStyle = '#00C853';
+            ctx.fillRect(20 * scale, 40 * scale, 60 * scale, 30 * scale);
+
+            // Truck cab
+            ctx.fillRect(65 * scale, 25 * scale, 15 * scale, 15 * scale);
+
+            // Shield/Check mark
+            ctx.strokeStyle = '#00C853';
+            ctx.lineWidth = 6 * scale;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+
+            // Check mark
+            ctx.beginPath();
+            ctx.moveTo(35 * scale, 50 * scale);
+            ctx.lineTo(42 * scale, 57 * scale);
+            ctx.lineTo(55 * scale, 40 * scale);
+            ctx.stroke();
+
+            // Wheels
+            ctx.fillStyle = '#ffffff';
+            ctx.beginPath();
+            ctx.arc(30 * scale, 75 * scale, 8 * scale, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.arc(65 * scale, 75 * scale, 8 * scale, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Text
+            ctx.fillStyle = '#ffffff';
+            ctx.font = `bold ${16 * scale}px Arial`;
+            ctx.textAlign = 'center';
+            ctx.fillText('CARB', 50 * scale, 92 * scale);
+        }
+
+        // Draw both icons
+        drawIcon(document.getElementById('icon192'));
+        drawIcon(document.getElementById('icon512'));
+
+        function download(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        // Add roundRect polyfill for older browsers
+        if (!CanvasRenderingContext2D.prototype.roundRect) {
+            CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius) {
+                this.beginPath();
+                this.moveTo(x + radius, y);
+                this.lineTo(x + width - radius, y);
+                this.arcTo(x + width, y, x + width, y + radius, radius);
+                this.lineTo(x + width, y + height - radius);
+                this.arcTo(x + width, y + height, x + width - radius, y + height, radius);
+                this.lineTo(x + radius, y + height);
+                this.arcTo(x, y + height, x, y + height - radius, radius);
+                this.lineTo(x, y + radius);
+                this.arcTo(x, y, x + radius, y, radius);
+                this.closePath();
+            };
+        }
+    </script>
+</body>
+</html>
