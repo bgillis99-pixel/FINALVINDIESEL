@@ -36,8 +36,42 @@ body {
   }
 }
 
-/* Touch target size */
+/* Touch target size - Apple HIG minimum 44x44 points */
 button, a {
   min-height: 44px;
   min-width: 44px;
+}
+
+/* Focus indicators for keyboard navigation - WCAG 2.1 */
+*:focus-visible {
+  outline: 3px solid #00C853;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #00C853;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --green: #00FF6E;
+    --navy: #000033;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

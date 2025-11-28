@@ -173,16 +173,29 @@ const App: React.FC = () => {
   return (
     <div className="min-h-screen flex flex-col bg-[#f8f9fa] font-sans text-[#003366]">
       {!isOnline && (
-        <div className="bg-gray-800 text-white text-xs text-center py-1 font-bold tracking-wider">
+        <div
+          className="bg-gray-800 text-white text-xs text-center py-1 font-bold tracking-wider"
+          role="alert"
+          aria-live="polite"
+          aria-atomic="true"
+        >
           OFFLINE MODE: VIEWING HISTORY ONLY
         </div>
       )}
 
-      <a href="tel:8446858922" className="bg-[#003366] text-white text-xs text-center py-2 font-bold tracking-wide px-2 block hover:bg-[#002244] active:bg-[#004488] transition-colors">
+      <a
+        href="tel:8446858922"
+        className="bg-[#003366] text-white text-xs text-center py-2 font-bold tracking-wide px-2 block hover:bg-[#002244] active:bg-[#004488] transition-colors"
+        aria-label="Call for immediate testing at 8 4 4 6 8 5 8 9 2 2, serving California statewide"
+      >
         NEED IMMEDIATE TESTING? CALL <span className="text-[#00C853] underline">844-685-8922</span> • SERVING CA STATEWIDE
       </a>
 
-      <header className="bg-white pt-3 pb-3 px-4 text-center shadow-sm sticky top-0 z-20 border-b-2 border-[#00C853] flex justify-between items-center">
+      <header
+        className="bg-white pt-3 pb-3 px-4 text-center shadow-sm sticky top-0 z-20 border-b-2 border-[#00C853] flex justify-between items-center"
+        role="banner"
+        aria-label="Mobile Carb Check header"
+      >
 
         <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-[#003366] rounded-lg flex items-center justify-center shadow-lg text-white relative overflow-hidden">
@@ -201,6 +214,8 @@ const App: React.FC = () => {
         <button
             onClick={() => setShowInstall(true)}
             className="bg-[#00C853] text-white px-4 py-2 rounded-full font-bold text-sm shadow-md hover:bg-[#00a844] active:scale-95 active:bg-[#00963d] transition-all flex items-center gap-2"
+            aria-label="Share app with others"
+            aria-describedby="share-description"
         >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
             SHARE APP
@@ -310,7 +325,12 @@ const App: React.FC = () => {
           </div>
       )}
 
-      <main className="flex-1 p-4 overflow-y-auto pb-32">
+      <main
+        id="main-content"
+        className="flex-1 p-4 overflow-y-auto pb-32"
+        role="main"
+        aria-label="Main application content"
+      >
         {currentView === AppView.HOME && (
             <VinChecker
                 onAddToHistory={handleAddToHistory}
@@ -361,10 +381,16 @@ const App: React.FC = () => {
         </div>
       )}
 
-      <nav className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-[#003366] pb-safe pt-2 px-6 flex justify-between items-end z-30 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] h-[80px]">
+      <nav
+        className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-[#003366] pb-safe pt-2 px-6 flex justify-between items-end z-30 shadow-[0_-4px_20px_rgba(0,0,0,0.05)] h-[80px]"
+        role="navigation"
+        aria-label="Main navigation"
+      >
         <button
           onClick={() => setCurrentView(AppView.HOME)}
           className={`flex flex-col items-center pb-4 w-16 transition-transform active:scale-90 duration-150 ${currentView === AppView.HOME ? '-translate-y-2' : ''}`}
+          aria-label="VIN Check"
+          aria-current={currentView === AppView.HOME ? 'page' : undefined}
         >
           <div className={`p-2 rounded-full mb-1 transition-colors ${currentView === AppView.HOME ? 'bg-[#00C853] text-white' : 'text-[#003366]'}`}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
@@ -375,6 +401,8 @@ const App: React.FC = () => {
         <button
           onClick={() => setCurrentView(AppView.ASSISTANT)}
           className={`flex flex-col items-center pb-4 w-16 transition-transform active:scale-90 duration-150 ${currentView === AppView.ASSISTANT ? '-translate-y-2' : ''}`}
+          aria-label="Chat Assistant"
+          aria-current={currentView === AppView.ASSISTANT ? 'page' : undefined}
         >
            <div className={`p-2 rounded-full mb-1 transition-colors ${currentView === AppView.ASSISTANT ? 'bg-[#00C853] text-white' : 'text-[#003366]'}`}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
@@ -385,6 +413,8 @@ const App: React.FC = () => {
         <button
           onClick={() => setCurrentView(AppView.ANALYZE)}
           className={`flex flex-col items-center pb-4 w-16 transition-transform active:scale-90 duration-150 ${currentView === AppView.ANALYZE ? '-translate-y-2' : ''}`}
+          aria-label="Media Analysis Tools"
+          aria-current={currentView === AppView.ANALYZE ? 'page' : undefined}
         >
            <div className={`p-2 rounded-full mb-1 transition-colors ${currentView === AppView.ANALYZE ? 'bg-[#00C853] text-white' : 'text-[#003366]'}`}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" /></svg>
@@ -395,6 +425,8 @@ const App: React.FC = () => {
         <button
           onClick={() => setCurrentView(AppView.PROFILE)}
           className={`flex flex-col items-center pb-4 w-16 transition-transform active:scale-90 duration-150 ${currentView === AppView.PROFILE ? '-translate-y-2' : ''}`}
+          aria-label="User Profile"
+          aria-current={currentView === AppView.PROFILE ? 'page' : undefined}
         >
            <div className={`p-2 rounded-full mb-1 transition-colors ${currentView === AppView.PROFILE ? 'bg-[#00C853] text-white' : 'text-[#003366]'}`}>
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>

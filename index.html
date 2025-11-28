@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes">
   <meta name="theme-color" content="#003366">
 
   <!-- Favicons -->
@@ -48,6 +48,32 @@
     ::-webkit-scrollbar-thumb {
       background: var(--green);
       border-radius: 3px;
+    }
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #003366;
+      color: white;
+      padding: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      z-index: 100;
+    }
+    .skip-link:focus {
+      top: 0;
+    }
+    /* Focus indicators for WCAG compliance */
+    *:focus-visible {
+      outline: 3px solid #00C853;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+    button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid #00C853;
+      outline-offset: 2px;
     }
   </style>
 
@@ -97,7 +123,8 @@
 </script>
 </head>
 <body>
-  <div id="root"></div>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <main id="root" role="main" aria-label="Mobile CARB Check Application"></main>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
