@@ -14,11 +14,13 @@ import {
   ScrollView,
   KeyboardAvoidingView,
   Platform,
+  Alert,
 } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import * as Haptics from 'expo-haptics';
 import GlassCard from '../components/GlassCard';
 import { colors } from '../theme/colors';
+import { drGilly } from '../services/drGillyService';
 
 interface Message {
   id: string;
@@ -59,23 +61,48 @@ export default function DrGScreen() {
       timestamp: new Date(),
     };
 
-    setMessages((prev) => [...prev, userMessage]);
+    const newMessages = [...messages, userMessage];
+    setMessages(newMessages);
     setInputText('');
     setIsLoading(true);
 
-    // TODO: Integrate with Gemini API
-    // For now, mock response
-    setTimeout(() => {
+    try {
+      // Call Dr. Gilly AI service (Cloud Run + Vertex AI)
+      const conversationHistory = newMessages.map((msg) => ({
+        role: msg.isUser ? ('user' as const) : ('assistant' as const),
+        content: msg.text,
+      }));
+
+      const response = await drGilly.chat(inputText, conversationHistory);
+
       const aiResponse: Message = {
         id: (Date.now() + 1).toString(),
-        text: `Great question! ${inputText}\n\nCARB (California Air Resources Board) compliance is essential for diesel vehicles operating in California. Would you like me to explain specific regulations or testing procedures?`,
+        text: response.response,
         isUser: false,
         timestamp: new Date(),
       };
+
       setMessages((prev) => [...prev, aiResponse]);
-      setIsLoading(false);
       scrollViewRef.current?.scrollToEnd({ animated: true });
-    }, 1500);
+    } catch (error) {
+      console.error('Dr. Gilly Error:', error);
+      Alert.alert(
+        'Connection Error',
+        'Unable to reach Dr. Gilly. Please check your connection and try again.',
+        [{ text: 'OK' }]
+      );
+
+      // Add error message to chat
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: "I'm having trouble connecting right now. Please try again in a moment.",
+        isUser: false,
+        timestamp: new Date(),
+      };
+      setMessages((prev) => [...prev, errorMessage]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleQuickQuestion = (question: string) => {
