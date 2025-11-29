@@ -66,3 +66,4 @@ logs/
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+service-account-key.json
